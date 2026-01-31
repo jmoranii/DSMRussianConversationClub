@@ -16,10 +16,29 @@ DSMRussianClub/
 ├── css/styles.css      # All styling, includes light/dark themes
 ├── js/main.js          # Language toggle + theme toggle logic
 ├── assets/images/
-│   └── hedgehog/       # Contains yozhik-hero.png mascot image
+│   └── hedgehog/       # Yozhik mascot images (see below)
 ├── BRAINSTORMING.md    # Full design decisions and wireframe
 └── README.md           # Project overview and structure
 ```
+
+### Mascot Assets
+
+All mascot images follow the naming convention `yozhik-{action}.png`:
+
+| File | Description | Used In |
+|------|-------------|---------|
+| `yozhik-hero.png` | Hero banner with Russian flag and "Клуб русского языка" | Hero section |
+| `yozhik-reading.png` | Reading a book | About section |
+| `yozhik-pointing.png` | Pointing gesture | When & Where section |
+| `yozhik-lets-talk.png` | "Давай поговорим" speech bubble | Join Us section |
+| `yozhik-kak-dela.png` | Waving, "Как дела?" | Footer |
+| `yozhik-coffee.png` | Holding coffee mug | Available for future use |
+| `yozhik-laptop.png` | Working on laptop | Available for future use |
+| `yozhik-microphone.png` | Holding microphone | Available for future use |
+| `yozhik-otlichno.png` | Celebrating, "Отлично!" | Available for future use |
+| `yozhik-poyekhali.png` | Waving, "Поехали!" | Available for future use |
+| `yozhik-privet-sign.png` | Holding "Привет!" sign | Available for future use |
+| `yozhik-sprite-sheet.png` | Multiple poses (sprite sheet) | Available for future use |
 
 ---
 
@@ -66,7 +85,7 @@ JavaScript toggles `data-theme` attribute and respects `prefers-color-scheme` fo
 | Decision | Choice |
 |----------|--------|
 | Color palette | "Forest Dacha" — greens, browns, golden yellow accent |
-| Mascot | Hedgehog (Ёжик) — Cartoon style, reading a book with "Клуб русского языка" text |
+| Mascot | Hedgehog (Ёжик) — Cartoon style, multiple poses used as "section companions" throughout the page |
 | Flags | All 15 former Soviet republics as emoji ribbon in footer |
 | Map | Google Maps iframe, wrapped in link to open in maps app |
 | Typography | System fonts (-apple-system, etc.) |
@@ -77,8 +96,7 @@ JavaScript toggles `data-theme` attribute and respects `prefers-color-scheme` fo
 
 These are marked with placeholder values and need real data:
 
-1. **Email**: `mailto:placeholder@example.com` in index.html (line 151)
-2. **WhatsApp**: `https://chat.whatsapp.com/placeholder` in index.html (line 157)
+1. **Email**: `mailto:placeholder@example.com` in index.html (line 166)
 
 ---
 
@@ -109,6 +127,13 @@ These are marked with placeholder values and need real data:
 
 ---
 
+## Notes
+
+- Section mascots are hidden on mobile (< 600px) to avoid clutter
+- Mascot images should have transparent backgrounds for best appearance on gradient section backgrounds
+
+---
+
 ## Testing Checklist
 
 When making changes, verify:
@@ -117,6 +142,8 @@ When making changes, verify:
 - [ ] Site looks good on mobile (test at 375px width)
 - [ ] Map loads and is clickable
 - [ ] All 15 flags display correctly
+- [ ] Mascot images display with transparent backgrounds
+- [ ] Section mascots hidden on mobile, visible on desktop
 
 ---
 
