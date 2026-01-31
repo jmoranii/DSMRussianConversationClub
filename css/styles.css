@@ -223,6 +223,50 @@ body {
   transform: scale(1.02) rotate(1deg);
 }
 
+/* --- Section Mascots --- */
+.section-mascot {
+  position: absolute;
+  top: var(--spacing-lg);
+  z-index: 10;
+  opacity: 0.9;
+  transition: all var(--transition-normal);
+}
+
+.section-mascot:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.section-mascot-right {
+  right: var(--spacing-md);
+}
+
+.section-mascot-left {
+  left: var(--spacing-md);
+}
+
+.section-mascot .mascot-img {
+  width: 80px;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+/* Footer mascot */
+.footer-mascot {
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-mascot .mascot-img {
+  width: 100px;
+  height: auto;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+  transition: transform var(--transition-normal);
+}
+
+.footer-mascot .mascot-img:hover {
+  transform: scale(1.1) rotate(-3deg);
+}
+
 /* Fallback placeholder */
 .hedgehog-placeholder {
   margin-bottom: var(--spacing-lg);
@@ -594,6 +638,15 @@ section h2 .section-icon {
   .flags-ribbon {
     font-size: 1.5rem;
     gap: var(--spacing-xs);
+  }
+
+  /* Hide section mascots on mobile - they take up too much space */
+  .section-mascot {
+    display: none;
+  }
+
+  .footer-mascot .mascot-img {
+    width: 80px;
   }
 }
 

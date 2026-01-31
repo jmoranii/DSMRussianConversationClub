@@ -16,7 +16,7 @@ DSMRussianClub/
 ├── css/styles.css      # All styling, includes light/dark themes
 ├── js/main.js          # Language toggle + theme toggle logic
 ├── assets/images/
-│   └── hedgehog/       # Empty — waiting for user-provided mascot images
+│   └── hedgehog/       # Contains yozhik-hero.png mascot image
 ├── BRAINSTORMING.md    # Full design decisions and wireframe
 └── README.md           # Project overview and structure
 ```
@@ -66,7 +66,7 @@ JavaScript toggles `data-theme` attribute and respects `prefers-color-scheme` fo
 | Decision | Choice |
 |----------|--------|
 | Color palette | "Forest Dacha" — greens, browns, golden yellow accent |
-| Mascot | Hedgehog (Ёжик) — Duolingo-inspired cartoon style, user will provide artwork |
+| Mascot | Hedgehog (Ёжик) — Cartoon style, reading a book with "Клуб русского языка" text |
 | Flags | All 15 former Soviet republics as emoji ribbon in footer |
 | Map | Google Maps iframe, wrapped in link to open in maps app |
 | Typography | System fonts (-apple-system, etc.) |
@@ -77,9 +77,8 @@ JavaScript toggles `data-theme` attribute and respects `prefers-color-scheme` fo
 
 These are marked with placeholder values and need real data:
 
-1. **Email**: `mailto:placeholder@example.com` in index.html
-2. **WhatsApp**: `https://chat.whatsapp.com/placeholder` in index.html
-3. **Hedgehog mascot**: Currently using 🦔 emoji, swap for actual image when provided
+1. **Email**: `mailto:placeholder@example.com` in index.html (line 151)
+2. **WhatsApp**: `https://chat.whatsapp.com/placeholder` in index.html (line 157)
 
 ---
 
@@ -103,7 +102,6 @@ These are marked with placeholder values and need real data:
 
 ## What's NOT Built Yet
 
-- Actual hedgehog artwork (waiting for user to provide)
 - Photo gallery (aspirational, no photos yet)
 - Custom domain (may add later)
 - 404 page
