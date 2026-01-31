@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Des Moines Russian Conversation Club</title>
+  <meta name="description" content="A friendly weekly meetup for Russian speakers and learners of all levels in Des Moines, Iowa.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦔</text></svg>">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <span class="logo-icon">🦔</span>
+        <span class="logo-text">
+          <span lang="en">Des Moines Russian Conversation Club</span>
+          <span lang="ru">Русский Разговорный Клуб Де-Мойна</span>
+        </span>
+      </div>
+      <div class="toggles">
+        <button id="lang-toggle" class="toggle-btn" aria-label="Toggle language">
+          <span lang="en">RU</span>
+          <span lang="ru">EN</span>
+        </button>
+        <button id="theme-toggle" class="toggle-btn" aria-label="Toggle theme">
+          <span class="theme-icon-light">🌙</span>
+          <span class="theme-icon-dark">☀️</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <!-- Yozhik - Our Mascot -->
+        <div class="hedgehog-hero">
+          <img src="assets/images/hedgehog/yozhik-hero.png"
+               alt="Yozhik the hedgehog welcomes you to the Russian Conversation Club"
+               title="Привет! I'm Yozhik (Ёжик) 🦔">
+        </div>
+        <h1>
+          <span lang="en">Welcome!</span>
+          <span lang="ru">Добро пожаловать!</span>
+        </h1>
+        <p class="tagline">
+          <span lang="en">A friendly space to practice Russian — all levels welcome</span>
+          <span lang="ru">Место для общения на русском языке — для всех уровней</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2>
+          <span lang="en">About Us</span>
+          <span lang="ru">О нас</span>
+        </h2>
+        <div class="about-content">
+          <p lang="en">
+            We're a casual group of Russian speakers and learners who meet weekly to chat, play games, and enjoy each other's company. Whether you're fluent or just learning your first words, you're welcome here.
+          </p>
+          <p lang="en">
+            No pressure, no tests — just good conversation and new friends.
+          </p>
+          <p lang="ru">
+            Мы — дружная группа русскоговорящих и изучающих русский язык. Каждую неделю мы встречаемся, чтобы поговорить, поиграть и просто хорошо провести время. Неважно, свободно ли вы говорите по-русски или только начинаете учить первые слова — мы рады всем.
+          </p>
+          <p lang="ru">
+            Без давления, без тестов — только приятное общение и новые друзья.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- When & Where Section -->
+    <section class="when-where" id="when-where">
+      <div class="container">
+        <h2>
+          <span lang="en">When & Where</span>
+          <span lang="ru">Когда и где</span>
+        </h2>
+
+        <div class="schedule-info">
+          <div class="info-item">
+            <span class="info-icon">📅</span>
+            <span lang="en">Every Saturday</span>
+            <span lang="ru">Каждую субботу</span>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">🕐</span>
+            <span lang="en">1:00 PM Central</span>
+            <span lang="ru">13:00 (центральное время)</span>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">📍</span>
+            <span lang="en">Study Room 1</span>
+            <span lang="ru">Учебная комната 1</span>
+          </div>
+        </div>
+
+        <div class="location">
+          <address>
+            <strong>Des Moines Public Library</strong><br>
+            1000 Grand Avenue<br>
+            Des Moines, IA 50309
+          </address>
+        </div>
+
+        <div class="map-container">
+          <a href="https://maps.google.com/?q=Des+Moines+Public+Library,+1000+Grand+Avenue,+Des+Moines,+IA+50309"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="map-link">
+            <iframe
+              src="https://www.google.com/maps?q=Des+Moines+Public+Library,+1000+Grand+Avenue,+Des+Moines,+IA+50309&output=embed"
+              width="100%"
+              height="300"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Des Moines Public Library location">
+            </iframe>
+            <span class="map-overlay">
+              <span lang="en">Click to open in Maps</span>
+              <span lang="ru">Нажмите, чтобы открыть в Картах</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join Us Section -->
+    <section class="join-us" id="join">
+      <div class="container">
+        <h2>
+          <span lang="en">Join Us</span>
+          <span lang="ru">Присоединяйтесь</span>
+        </h2>
+        <p class="join-intro">
+          <span lang="en">Want to join? Just show up! No registration needed. Or reach out if you have questions:</span>
+          <span lang="ru">Хотите присоединиться? Просто приходите! Регистрация не нужна. Или напишите нам, если есть вопросы:</span>
+        </p>
+        <div class="contact-buttons">
+          <!-- Placeholder href - replace with actual email -->
+          <a href="mailto:placeholder@example.com" class="btn btn-email">
+            <span class="btn-icon">📧</span>
+            <span lang="en">Email Us</span>
+            <span lang="ru">Написать</span>
+          </a>
+          <!-- Placeholder href - replace with actual WhatsApp link -->
+          <a href="https://chat.whatsapp.com/placeholder" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+            <span class="btn-icon">💬</span>
+            <span lang="en">WhatsApp Group</span>
+            <span lang="ru">Группа WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="flags-ribbon">
+        <span title="Russia">🇷🇺</span>
+        <span title="Ukraine">🇺🇦</span>
+        <span title="Belarus">🇧🇾</span>
+        <span title="Moldova">🇲🇩</span>
+        <span title="Georgia">🇬🇪</span>
+        <span title="Armenia">🇦🇲</span>
+        <span title="Azerbaijan">🇦🇿</span>
+        <span title="Kazakhstan">🇰🇿</span>
+        <span title="Uzbekistan">🇺🇿</span>
+        <span title="Tajikistan">🇹🇯</span>
+        <span title="Kyrgyzstan">🇰🇬</span>
+        <span title="Turkmenistan">🇹🇲</span>
+        <span title="Estonia">🇪🇪</span>
+        <span title="Latvia">🇱🇻</span>
+        <span title="Lithuania">🇱🇹</span>
+      </div>
+      <p class="copyright">
+        © 2026 Des Moines Russian Conversation Club
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
