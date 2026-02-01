@@ -35,17 +35,17 @@ All mascot images follow the naming convention `yozhik-{action}.png`:
 
 | File | Description | Used In |
 |------|-------------|---------|
-| `yozhik-hero.png` | Hero banner with Russian flag and "Клуб русского языка" | Hero section |
+| `yozhik-hero.png` | Hero banner with Russian flag and "Клуб русского языка" | Hero section, Memory game |
 | `yozhik-reading.png` | Reading a book | About section, Memory game |
 | `yozhik-pointing.png` | Pointing gesture | When & Where section, Memory game |
 | `yozhik-lets-talk.png` | "Давай поговорим" speech bubble | Join Us section, Memory game |
 | `yozhik-kak-dela.png` | Waving, "Как дела?" | Footer (easter egg trigger), Memory game |
-| `yozhik-coffee.png` | Holding coffee mug | Header logo + Favicon, Memory game |
+| `yozhik-coffee.png` | Holding coffee mug (labeled "Drinking tea") | Header logo + Favicon, Memory game |
 | `yozhik-laptop.png` | Working on laptop | Memory game |
 | `yozhik-microphone.png` | Holding microphone | Easter egg music player, Memory game |
-| `yozhik-otlichno.png` | Celebrating, "Отлично!" | Memory game win message |
-| `yozhik-poyekhali.png` | Waving, "Поехали!" | Available for future use |
-| `yozhik-privet-sign.png` | Holding "Привет!" sign | Available for future use |
+| `yozhik-otlichno.png` | Celebrating, "Отлично!" | Memory game win message, Memory game |
+| `yozhik-poyekhali.png` | Waving, "Поехали!" | Memory game |
+| `yozhik-privet-sign.png` | Holding "Привет!" sign | Memory game |
 | `yozhik-sprite-sheet.png` | Multiple poses (sprite sheet) | Available for future use |
 
 ---
@@ -131,8 +131,11 @@ A hidden feature accessed by clicking the footer Yozhik 3 times:
 **Easter Egg Page** (`easter-egg.html`):
 - Music player with "Yozhik's Welcome" (Привет от Ёжика) club anthem
 - Bilingual lyrics display
-- Memory game: Match 8 Yozhik poses (EN description ↔ RU description)
-- 16 cards in 4x4 grid, flip animation, move counter
+- Memory game:
+  - 11 total Yozhik poses available, 3 randomly selected per game
+  - 6 cards in 3×2 grid (match EN description ↔ RU description)
+  - Flip animation, move counter
+  - Button shows "Reset" during play, changes to "Play Again" after winning
 - Win message with yozhik-otlichno on completion
 
 **Files**:
@@ -185,7 +188,7 @@ When making changes, verify:
 - [ ] Section mascots hidden on mobile, visible on desktop
 - [ ] Easter egg: 3 clicks on footer Yozhik triggers redirect
 - [ ] Easter egg: Music player plays/pauses correctly
-- [ ] Easter egg: Memory game matches pairs and shows win message
+- [ ] Easter egg: Memory game matches pairs, shows win message, button changes to "Play Again"
 
 ---
 

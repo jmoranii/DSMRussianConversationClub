@@ -227,12 +227,25 @@
   background: #6d5a45;
 }
 
-/* --- Game Board - 4x4 Grid --- */
+/* Dynamic button text - default shows "Reset", after winning shows "Play Again" */
+.btn-reset .play-again-text {
+  display: none;
+}
+
+.btn-reset.game-won .reset-text {
+  display: none;
+}
+
+.btn-reset.game-won .play-again-text {
+  display: inline;
+}
+
+/* --- Game Board - 3x2 Grid --- */
 .game-board {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--spacing-sm);
-  max-width: 600px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+  max-width: 450px;
   margin: 0 auto;
 }
 
@@ -284,16 +297,18 @@
 }
 
 .card-back img {
-  width: 50%;
+  width: 55%;
   height: auto;
   margin-bottom: var(--spacing-xs);
 }
 
 .card-label {
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   font-weight: 600;
   text-align: center;
   color: var(--color-text);
+  line-height: 1.2;
+  padding: 0 4px;
   line-height: 1.2;
   padding: 0 2px;
 }
@@ -367,16 +382,17 @@
   }
 
   .game-board {
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--spacing-xs);
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+    max-width: 100%;
   }
 
   .card-label {
-    font-size: 0.6rem;
+    font-size: 0.75rem;
   }
 
   .card-back img {
-    width: 45%;
+    width: 50%;
   }
 
   .music-player {
@@ -410,10 +426,10 @@
 
 @media (max-width: 400px) {
   .card-label {
-    font-size: 0.55rem;
+    font-size: 0.65rem;
   }
 
   .card-back img {
-    width: 40%;
+    width: 45%;
   }
 }

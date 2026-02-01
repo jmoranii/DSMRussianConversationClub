@@ -7,16 +7,24 @@
   'use strict';
 
   // --- Game Data ---
-  var CARDS = [
-    { image: 'yozhik-coffee.png', en: 'Drinking coffee', ru: 'Пьёт кофе' },
+  // All available Yozhik poses (11 total, excluding sprite sheet)
+  var ALL_CARDS = [
+    { image: 'yozhik-coffee.png', en: 'Drinking tea', ru: 'Пьёт чай' },
     { image: 'yozhik-reading.png', en: 'Reading a book', ru: 'Читает книгу' },
     { image: 'yozhik-pointing.png', en: 'Look here!', ru: 'Смотри сюда!' },
     { image: 'yozhik-lets-talk.png', en: 'Let\'s chat!', ru: 'Давай поговорим!' },
     { image: 'yozhik-kak-dela.png', en: 'How are you?', ru: 'Как дела?' },
     { image: 'yozhik-laptop.png', en: 'Working hard', ru: 'Работает' },
     { image: 'yozhik-microphone.png', en: 'Singing a song', ru: 'Поёт песню' },
-    { image: 'yozhik-otlichno.png', en: 'Excellent!', ru: 'Отлично!' }
+    { image: 'yozhik-otlichno.png', en: 'Excellent!', ru: 'Отлично!' },
+    { image: 'yozhik-hero.png', en: 'Russian Language Club', ru: 'Клуб русского языка' },
+    { image: 'yozhik-poyekhali.png', en: 'Let\'s go!', ru: 'Поехали!' },
+    { image: 'yozhik-privet-sign.png', en: 'Hello!', ru: 'Привет!' }
   ];
+
+  // Game configuration
+  var PAIRS_PER_GAME = 3;
+  var selectedCards = [];  // Stores the randomly selected cards for current game
 
   // --- Game State ---
   var flippedCards = [];
@@ -46,10 +54,17 @@
     return mins + ':' + (secs < 10 ? '0' : '') + secs;
   }
 
+  // --- Card Selection ---
+  function selectRandomCards() {
+    // Shuffle all cards and pick the number needed for this game
+    var shuffled = shuffle(ALL_CARDS.slice());
+    selectedCards = shuffled.slice(0, PAIRS_PER_GAME);
+  }
+
   // --- Card Generation ---
   function createCards() {
     var cards = [];
-    CARDS.forEach(function(card, index) {
+    selectedCards.forEach(function(card, index) {
       // English card
       cards.push({
         id: index + '-en',
@@ -75,6 +90,7 @@
     var board = document.getElementById('game-board');
     if (!board) return;
 
+    selectRandomCards();  // Pick new random cards for this game
     var cards = createCards();
     board.innerHTML = '';
 
@@ -130,7 +146,7 @@
       flippedCards = [];
       isLocked = false;
 
-      if (matchedPairs === CARDS.length) {
+      if (matchedPairs === PAIRS_PER_GAME) {
         showWinMessage();
       }
     } else {
@@ -156,6 +172,11 @@
     if (winEl) {
       winEl.hidden = false;
     }
+    // Change button text to "Play Again"
+    var resetBtn = document.getElementById('reset-game');
+    if (resetBtn) {
+      resetBtn.classList.add('game-won');
+    }
   }
 
   function resetGame() {
@@ -168,6 +189,12 @@
     var winEl = document.getElementById('win-message');
     if (winEl) {
       winEl.hidden = true;
+    }
+
+    // Change button text back to "Reset"
+    var resetBtn = document.getElementById('reset-game');
+    if (resetBtn) {
+      resetBtn.classList.remove('game-won');
     }
 
     renderBoard();
