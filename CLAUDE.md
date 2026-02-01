@@ -32,7 +32,7 @@ All mascot images follow the naming convention `yozhik-{action}.png`:
 | `yozhik-pointing.png` | Pointing gesture | When & Where section |
 | `yozhik-lets-talk.png` | "Давай поговорим" speech bubble | Join Us section |
 | `yozhik-kak-dela.png` | Waving, "Как дела?" | Footer |
-| `yozhik-coffee.png` | Holding coffee mug | Available for future use |
+| `yozhik-coffee.png` | Holding coffee mug | Header logo + Favicon |
 | `yozhik-laptop.png` | Working on laptop | Available for future use |
 | `yozhik-microphone.png` | Holding microphone | Available for future use |
 | `yozhik-otlichno.png` | Celebrating, "Отлично!" | Available for future use |
@@ -97,7 +97,7 @@ JavaScript toggles `data-theme` attribute and respects `prefers-color-scheme` fo
 - **Name**: Des Moines Russian Conversation Club
 - **Location**: Des Moines Public Library, 1000 Grand Avenue, Des Moines, IA 50309
 - **Room**: Study Room 1
-- **Schedule**: Every Saturday at 1:00 PM Central
+- **Schedule**: Every Saturday at 1:00 PM - 2:00 PM Central
 - **Vibe**: Casual, welcoming, all levels, games and conversation
 
 ---
@@ -123,6 +123,8 @@ JavaScript toggles `data-theme` attribute and respects `prefers-color-scheme` fo
 
 - Section mascots are hidden on mobile (< 600px) to avoid clutter
 - All mascot images now have transparent backgrounds
+- "Add to Calendar" button creates a recurring Google Calendar event (Saturdays 1-2 PM Central)
+- "Copy Address" button copies library address to clipboard with bilingual feedback
 
 ---
 

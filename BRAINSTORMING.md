@@ -206,6 +206,7 @@ The hedgehog is a beloved figure in Russian/Soviet culture, most famously from t
 - **Personality**: Friendly, welcoming, with speech bubbles in Russian
 
 ### Current Implementation:
+- **Header logo + Favicon**: `yozhik-coffee.png` — Holding coffee mug
 - **Hero section**: `yozhik-hero.png` — Banner with Russian flag and club name
 - **About section**: `yozhik-reading.png` — Reading a book
 - **When & Where**: `yozhik-pointing.png` — Pointing gesture
@@ -213,7 +214,7 @@ The hedgehog is a beloved figure in Russian/Soviet culture, most famously from t
 - **Footer**: `yozhik-kak-dela.png` — Waving goodbye with "Как дела?"
 
 ### Available for future use:
-- `yozhik-coffee.png`, `yozhik-laptop.png`, `yozhik-microphone.png`
+- `yozhik-laptop.png`, `yozhik-microphone.png`
 - `yozhik-otlichno.png`, `yozhik-poyekhali.png`, `yozhik-privet-sign.png`
 - `yozhik-sprite-sheet.png` (all poses combined)
 

@@ -6,7 +6,7 @@ A simple, static website for the Des Moines Russian Conversation Club — a frie
 
 - **What**: Casual Russian-speaking meetup — conversation, games, community
 - **Where**: Des Moines Public Library, Study Room 1
-- **When**: Every Saturday at 1:00 PM Central
+- **When**: Every Saturday at 1:00 PM - 2:00 PM Central
 - **Who**: Anyone interested in speaking Russian, from beginners to native speakers
 
 ## Project Structure
@@ -51,6 +51,10 @@ DSMRussianClub/
 - [x] Hedgehog mascot "Yozhik" — multiple poses as section companions
 - [x] Footer with all 15 former Soviet republic flags
 - [x] Responsive design (mobile-friendly)
+- [x] "Add to Calendar" button (Google Calendar, recurring event)
+- [x] Copy address button with feedback
+- [x] Open Graph meta tags for social sharing
+- [x] Custom favicon (hedgehog mascot)
 
 ## Color Palette — Forest Dacha
 
