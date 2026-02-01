@@ -59,6 +59,12 @@ A simple, static website for a local Russian-speaking club that meets weekly at 
   - Could be rotating or static, adds cultural flavor
   - Example: "В гостях хорошо, а дома лучше" (It's good to visit, but home is best)
 
+### Fun Extras
+- [x] **Easter egg** — Hidden secret page triggered by clicking footer Yozhik 3 times
+  - Music player with bilingual club anthem "Yozhik's Welcome" (Привет от Ёжика)
+  - Memory game: Match 8 Yozhik poses (English ↔ Russian descriptions)
+  - Visual hints: wiggle on first click, glow on second, spin away on third
+
 ### Aspirational (Later)
 - [ ] **Photo gallery** — Pictures of club meetups (no photos available yet)
 - [ ] **Custom domain** — For a more professional look
@@ -72,7 +78,8 @@ A simple, static website for a local Russian-speaking club that meets weekly at 
 - **JavaScript** — Minimal, for:
   - Language toggle (swap text content)
   - Theme toggle (light/dark)
-  - Maybe subtle mascot animations
+  - Easter egg trigger (3-click detection)
+  - Memory game + audio player (easter egg page)
 - **Hosting** — GitHub Pages (free, simple)
 - **No frameworks** — Keep it simple and fast
 
@@ -213,9 +220,13 @@ The hedgehog is a beloved figure in Russian/Soviet culture, most famously from t
 - **Join Us**: `yozhik-lets-talk.png` — "Давай поговорим" speech bubble
 - **Footer**: `yozhik-kak-dela.png` — Waving goodbye with "Как дела?"
 
+### Used in Easter Egg:
+- `yozhik-microphone.png` — Music player mascot
+- `yozhik-otlichno.png` — Win message celebration
+- `yozhik-laptop.png`, `yozhik-coffee.png`, `yozhik-reading.png`, `yozhik-pointing.png`, `yozhik-lets-talk.png`, `yozhik-kak-dela.png` — Memory game cards
+
 ### Available for future use:
-- `yozhik-laptop.png`, `yozhik-microphone.png`
-- `yozhik-otlichno.png`, `yozhik-poyekhali.png`, `yozhik-privet-sign.png`
+- `yozhik-poyekhali.png`, `yozhik-privet-sign.png`
 - `yozhik-sprite-sheet.png` (all poses combined)
 
 ---
@@ -251,6 +262,7 @@ The hedgehog is a beloved figure in Russian/Soviet culture, most famously from t
 
 ### Remaining
 - [x] Replace email placeholder with real contact
+- [x] Easter egg (hidden page with music + game)
 - [ ] Deploy to GitHub Pages
 - [ ] Optional: Add Russian proverbs
 - [ ] Optional: Custom domain

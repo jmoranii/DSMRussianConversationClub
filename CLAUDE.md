@@ -13,10 +13,18 @@ A simple, static single-page website for a local Russian-speaking club in Des Mo
 ```
 DSMRussianClub/
 ├── index.html          # Single-page site with all content
-├── css/styles.css      # All styling, includes light/dark themes
-├── js/main.js          # Language toggle + theme toggle logic
-├── assets/images/
-│   └── hedgehog/       # Yozhik mascot images (see below)
+├── easter-egg.html     # Secret page (music player + memory game)
+├── css/
+│   ├── styles.css      # All styling, includes light/dark themes
+│   └── easter-egg.css  # Easter egg page styles
+├── js/
+│   ├── main.js         # Language toggle, theme toggle, easter egg trigger
+│   └── easter-egg.js   # Memory game + audio player logic
+├── assets/
+│   ├── audio/
+│   │   └── club-song.mp3   # "Yozhik's Welcome" club anthem
+│   └── images/
+│       └── hedgehog/   # Yozhik mascot images (see below)
 ├── BRAINSTORMING.md    # Full design decisions and wireframe
 └── README.md           # Project overview and structure
 ```
@@ -28,14 +36,14 @@ All mascot images follow the naming convention `yozhik-{action}.png`:
 | File | Description | Used In |
 |------|-------------|---------|
 | `yozhik-hero.png` | Hero banner with Russian flag and "Клуб русского языка" | Hero section |
-| `yozhik-reading.png` | Reading a book | About section |
-| `yozhik-pointing.png` | Pointing gesture | When & Where section |
-| `yozhik-lets-talk.png` | "Давай поговорим" speech bubble | Join Us section |
-| `yozhik-kak-dela.png` | Waving, "Как дела?" | Footer |
-| `yozhik-coffee.png` | Holding coffee mug | Header logo + Favicon |
-| `yozhik-laptop.png` | Working on laptop | Available for future use |
-| `yozhik-microphone.png` | Holding microphone | Available for future use |
-| `yozhik-otlichno.png` | Celebrating, "Отлично!" | Available for future use |
+| `yozhik-reading.png` | Reading a book | About section, Memory game |
+| `yozhik-pointing.png` | Pointing gesture | When & Where section, Memory game |
+| `yozhik-lets-talk.png` | "Давай поговорим" speech bubble | Join Us section, Memory game |
+| `yozhik-kak-dela.png` | Waving, "Как дела?" | Footer (easter egg trigger), Memory game |
+| `yozhik-coffee.png` | Holding coffee mug | Header logo + Favicon, Memory game |
+| `yozhik-laptop.png` | Working on laptop | Memory game |
+| `yozhik-microphone.png` | Holding microphone | Easter egg music player, Memory game |
+| `yozhik-otlichno.png` | Celebrating, "Отлично!" | Memory game win message |
 | `yozhik-poyekhali.png` | Waving, "Поехали!" | Available for future use |
 | `yozhik-privet-sign.png` | Holding "Привет!" sign | Available for future use |
 | `yozhik-sprite-sheet.png` | Multiple poses (sprite sheet) | Available for future use |
@@ -110,12 +118,36 @@ JavaScript toggles `data-theme` attribute and respects `prefers-color-scheme` fo
 
 ---
 
+## Easter Egg
+
+A hidden feature accessed by clicking the footer Yozhik 3 times:
+
+**Trigger**:
+- Click 1: Yozhik wiggles
+- Click 2: Yozhik wiggles + glows golden
+- Click 3: Yozhik spins away, redirects to `easter-egg.html`
+- Clicks reset after 2 seconds of inactivity
+
+**Easter Egg Page** (`easter-egg.html`):
+- Music player with "Yozhik's Welcome" (Привет от Ёжика) club anthem
+- Bilingual lyrics display
+- Memory game: Match 8 Yozhik poses (EN description ↔ RU description)
+- 16 cards in 4x4 grid, flip animation, move counter
+- Win message with yozhik-otlichno on completion
+
+**Files**:
+- `easter-egg.html` — Page structure
+- `css/easter-egg.css` — Styles
+- `js/easter-egg.js` — Game logic + audio player
+- `assets/audio/club-song.mp3` — Song file
+
+---
+
 ## What's NOT Built Yet
 
 - Photo gallery (aspirational, no photos yet)
 - Custom domain (may add later)
 - 404 page
-- Animations
 
 ---
 
@@ -151,6 +183,9 @@ When making changes, verify:
 - [ ] All 15 flags display correctly
 - [x] Mascot images display with transparent backgrounds
 - [ ] Section mascots hidden on mobile, visible on desktop
+- [ ] Easter egg: 3 clicks on footer Yozhik triggers redirect
+- [ ] Easter egg: Music player plays/pauses correctly
+- [ ] Easter egg: Memory game matches pairs and shows win message
 
 ---
 

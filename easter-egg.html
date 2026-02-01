@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yozhik's Secret Room</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/easter-egg.css">
+  <link rel="icon" type="image/png" href="assets/images/hedgehog/yozhik-coffee.png">
+</head>
+<body class="easter-egg-page">
+
+  <!-- Header with back button -->
+  <header class="easter-header">
+    <a href="index.html" class="back-link">
+      <span lang="en">← Back to main site</span>
+      <span lang="ru">← Вернуться на сайт</span>
+    </a>
+    <h1>
+      <span lang="en">Yozhik's Secret Room</span>
+      <span lang="ru">Секретная комната Ёжика</span>
+    </h1>
+    <div class="toggles">
+      <button id="lang-toggle" class="toggle-btn" aria-label="Toggle language">
+        <span lang="en">RU</span>
+        <span lang="ru">EN</span>
+      </button>
+      <button id="theme-toggle" class="toggle-btn" aria-label="Toggle theme">
+        <span class="theme-icon-light">🌙</span>
+        <span class="theme-icon-dark">☀️</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="easter-main">
+
+    <!-- Music Player Section -->
+    <section class="music-section">
+      <h2>
+        <span lang="en">Yozhik's Welcome Song</span>
+        <span lang="ru">Песня Ёжика</span>
+      </h2>
+      <div class="music-player">
+        <img src="assets/images/hedgehog/yozhik-microphone.png"
+             alt="Yozhik singing" class="player-mascot">
+        <div class="player-controls">
+          <button id="play-btn" class="btn btn-play">
+            <span class="play-icon">▶</span>
+            <span lang="en">Play Song</span>
+            <span lang="ru">Воспроизвести</span>
+          </button>
+          <div class="progress-container">
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+            </div>
+            <span class="time-display">0:00 / 0:00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lyrics Display -->
+      <div class="lyrics-container">
+        <h3>
+          <span lang="en">Lyrics</span>
+          <span lang="ru">Текст песни</span>
+        </h3>
+        <div class="lyrics-scroll">
+[Accordion opens gently, glockenspiel sparkles]
+
+[Verse 1 - English]
+There's a hedgehog in Des Moines with a story to share
+He waits in the library with a little green chair
+He doesn't care if you stumble, doesn't care if you're slow
+The only way to learn a language is to give it a go
+
+[Verse 1 - Russian]
+Ёжик в Де-Мойне ждёт, у него есть рассказ
+В библиотеке он сидит и приветствует вас
+Ему всё равно, если трудно, если страшно начать
+Ведь чтобы выучить язык, нужно просто болтать
+
+[Chorus - Bilingual]
+Приходите, come on in, every Saturday at one
+Говорите, laugh and learn, till the afternoon is done
+From the Baltics to the Steppe, every voice belongs
+This is Yozhik's welcome — Привет от Ёжика — our song
+
+[Verse 2 - English]
+Maybe you grew up in Minsk, maybe you're from here
+Maybe Russian's just a dream you've been chasing for years
+Doesn't matter where you're from or what words you know
+The table's set, the tea is warm, and there's room left to grow
+
+[Verse 2 - Russian]
+Может, ты из Минска родом, может, из Айовы
+Может, русский — мечта, к которой шёл ты годы
+Неважно, кто ты, откуда, сколько слов ты знаешь
+За столом есть место, здесь тебя понимают
+
+[Chorus - Bilingual]
+Приходите, come on in, every Saturday at one
+Говорите, laugh and learn, till the afternoon is done
+From the Baltics to the Steppe, every voice belongs
+This is Yozhik's welcome — Привет от Ёжика — our song
+
+[Bridge - Spoken/Soft]
+«Как дела?» — How are you?
+«Давай поговорим» — Let's talk
+«Мы рады вас видеть» — We're glad you're here
+
+[Final Chorus - Full Energy]
+Приходите, come on in, every Saturday at one
+Говорите, laugh and learn, till the afternoon is done
+From the Baltics to the Steppe, every voice belongs
+This is Yozhik's welcome — Привет от Ёжика — our song
+
+[Outro - Accordion fades]
+Добро пожаловать... Welcome home...
+        </div>
+      </div>
+    </section>
+
+    <!-- Memory Game Section -->
+    <section class="game-section">
+      <h2>
+        <span lang="en">Memory Game - Match the Pairs!</span>
+        <span lang="ru">Игра на память - Найди пары!</span>
+      </h2>
+      <p class="game-instructions">
+        <span lang="en">Match each Yozhik with their action in both languages</span>
+        <span lang="ru">Соедини каждого Ёжика с его действием на обоих языках</span>
+      </p>
+
+      <div class="game-stats">
+        <span class="moves-counter">
+          <span lang="en">Moves:</span>
+          <span lang="ru">Ходов:</span>
+          <span id="move-count">0</span>
+        </span>
+        <button id="reset-game" class="btn btn-reset">
+          <span lang="en">Reset</span>
+          <span lang="ru">Заново</span>
+        </button>
+      </div>
+
+      <div id="game-board" class="game-board">
+        <!-- 16 cards (4x4 grid) generated by JS -->
+      </div>
+
+      <div id="win-message" class="win-message" hidden>
+        <img src="assets/images/hedgehog/yozhik-otlichno.png" alt="Excellent!">
+        <p>
+          <span lang="en">Excellent! You found all pairs!</span>
+          <span lang="ru">Отлично! Вы нашли все пары!</span>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <audio id="club-song" preload="metadata">
+    <source src="assets/audio/club-song.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="js/main.js"></script>
+  <script src="js/easter-egg.js"></script>
+</body>
+</html>

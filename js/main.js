@@ -27,6 +27,10 @@
   // --- Constants ---
   const ADDRESS = 'Des Moines Public Library, 1000 Grand Avenue, Des Moines, IA 50309';
 
+  // --- Easter Egg State ---
+  var easterEggClicks = 0;
+  var easterEggTimeout = null;
+
   // --- Utilities ---
   function getStoredValue(key, defaultValue) {
     try {
@@ -152,6 +156,35 @@
     });
   }
 
+  // --- Easter Egg Trigger ---
+  function handleEasterEggClick() {
+    var footerYozhik = document.getElementById('footer-yozhik');
+    easterEggClicks++;
+
+    // Visual feedback
+    if (easterEggClicks === 1) {
+      footerYozhik.classList.add('easter-hint-1');
+    } else if (easterEggClicks === 2) {
+      footerYozhik.classList.remove('easter-hint-1');
+      footerYozhik.classList.add('easter-hint-2');
+    } else if (easterEggClicks >= 3) {
+      // Trigger easter egg!
+      footerYozhik.classList.remove('easter-hint-2');
+      footerYozhik.classList.add('easter-activated');
+      setTimeout(function() {
+        window.location.href = 'easter-egg.html';
+      }, 500);
+      return;
+    }
+
+    // Reset after 2 seconds of inactivity
+    clearTimeout(easterEggTimeout);
+    easterEggTimeout = setTimeout(function() {
+      easterEggClicks = 0;
+      footerYozhik.classList.remove('easter-hint-1', 'easter-hint-2');
+    }, 2000);
+  }
+
   // --- Event Listeners ---
   function bindEvents() {
     if (langToggle) {
@@ -168,6 +201,15 @@
 
     if (copyAddressBtn) {
       copyAddressBtn.addEventListener('click', copyAddress);
+    }
+
+    // Easter egg trigger
+    var footerYozhik = document.getElementById('footer-yozhik');
+    if (footerYozhik) {
+      footerYozhik.addEventListener('click', handleEasterEggClick);
+      footerYozhik.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') handleEasterEggClick();
+      });
     }
 
     // Listen for system theme changes

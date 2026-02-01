@@ -13,20 +13,25 @@ A simple, static website for the Des Moines Russian Conversation Club — a frie
 
 ```
 DSMRussianClub/
-├── index.html              # Main (and only) HTML page
+├── index.html              # Main single-page site
+├── easter-egg.html         # Secret page with music player + memory game
 ├── css/
-│   └── styles.css          # All styles, including light/dark themes
+│   ├── styles.css          # All styles, including light/dark themes
+│   └── easter-egg.css      # Easter egg page styles
 ├── js/
-│   └── main.js             # Language toggle, theme toggle, any interactions
+│   ├── main.js             # Language toggle, theme toggle, easter egg trigger
+│   └── easter-egg.js       # Memory game + audio player logic
 ├── assets/
+│   ├── audio/
+│   │   └── club-song.mp3   # "Yozhik's Welcome" club anthem
 │   └── images/
 │       └── hedgehog/       # Yozhik mascot images (transparent PNGs)
 │           ├── yozhik-hero.png         # Hero banner image
 │           ├── yozhik-reading.png      # About section
 │           ├── yozhik-pointing.png     # When & Where section
 │           ├── yozhik-lets-talk.png    # Join Us section
-│           ├── yozhik-kak-dela.png     # Footer
-│           └── (+ 6 more for future use)
+│           ├── yozhik-kak-dela.png     # Footer (easter egg trigger)
+│           └── (+ 6 more used in easter egg)
 ├── BRAINSTORMING.md        # Design decisions and planning
 ├── CLAUDE.md               # Claude Code context file
 └── README.md               # This file
@@ -55,6 +60,7 @@ DSMRussianClub/
 - [x] Copy address button with feedback
 - [x] Open Graph meta tags for social sharing
 - [x] Custom favicon (hedgehog mascot)
+- [x] **Easter egg** — Hidden secret page with music player + memory game
 
 ## Color Palette — Forest Dacha
 
