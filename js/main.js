@@ -206,7 +206,13 @@
     // Easter egg trigger
     var footerYozhik = document.getElementById('footer-yozhik');
     if (footerYozhik) {
+      // Use both click and touchend for cross-platform support
+      // touchend is more reliable on Android
       footerYozhik.addEventListener('click', handleEasterEggClick);
+      footerYozhik.addEventListener('touchend', function(e) {
+        e.preventDefault(); // Prevent ghost click
+        handleEasterEggClick();
+      }, { passive: false });
       footerYozhik.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') handleEasterEggClick();
       });

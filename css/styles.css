@@ -728,6 +728,11 @@ section h2 .section-icon {
 #footer-yozhik {
   cursor: pointer;
   transition: transform var(--transition-fast), filter var(--transition-fast);
+  /* Critical for Android touch events */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 #footer-yozhik.easter-hint-1 {
