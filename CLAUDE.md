@@ -126,6 +126,19 @@ JavaScript toggles `data-theme` attribute and respects `prefers-color-scheme` fo
 
 ---
 
+## URLs That May Change
+
+**IMPORTANT**: The following URLs are hardcoded and may need updating if the site moves:
+
+| Location | Current URL | File |
+|----------|-------------|------|
+| Website URL | `https://jmoranii.github.io/DSMRussianConversationClub/` | `js/main.js` (in addToCalendar function) |
+| og:url | *(not set yet - add when deploying)* | `index.html` |
+
+**Ask the user periodically**: "Has the website URL changed? If so, I'll update the references in the code."
+
+---
+
 ## Testing Checklist
 
 When making changes, verify:
