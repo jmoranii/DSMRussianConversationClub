@@ -92,14 +92,6 @@ JavaScript toggles `data-theme` attribute and respects `prefers-color-scheme` fo
 
 ---
 
-## Placeholders to Replace
-
-These are marked with placeholder values and need real data:
-
-1. **Email**: `mailto:placeholder@example.com` in index.html (line 166)
-
----
-
 ## Club Details
 
 - **Name**: Des Moines Russian Conversation Club
@@ -130,7 +122,7 @@ These are marked with placeholder values and need real data:
 ## Notes
 
 - Section mascots are hidden on mobile (< 600px) to avoid clutter
-- Mascot images should have transparent backgrounds for best appearance on gradient section backgrounds
+- All mascot images now have transparent backgrounds
 
 ---
 
@@ -142,7 +134,7 @@ When making changes, verify:
 - [ ] Site looks good on mobile (test at 375px width)
 - [ ] Map loads and is clickable
 - [ ] All 15 flags display correctly
-- [ ] Mascot images display with transparent backgrounds
+- [x] Mascot images display with transparent backgrounds
 - [ ] Section mascots hidden on mobile, visible on desktop
 
 ---

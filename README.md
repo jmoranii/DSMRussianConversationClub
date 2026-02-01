@@ -19,14 +19,16 @@ DSMRussianClub/
 ├── js/
 │   └── main.js             # Language toggle, theme toggle, any interactions
 ├── assets/
-│   ├── images/
-│   │   ├── hedgehog/       # Mascot images (user-provided)
-│   │   │   ├── hedgehog-main.png    # Hero mascot image
-│   │   │   └── hedgehog-favicon.png # Small version for favicon
-│   │   ├── flags/          # Flag icons (if using images vs emoji)
-│   │   └── photos/         # Future: club meetup photos
-│   └── fonts/              # Custom fonts (if any)
+│   └── images/
+│       └── hedgehog/       # Yozhik mascot images (transparent PNGs)
+│           ├── yozhik-hero.png         # Hero banner image
+│           ├── yozhik-reading.png      # About section
+│           ├── yozhik-pointing.png     # When & Where section
+│           ├── yozhik-lets-talk.png    # Join Us section
+│           ├── yozhik-kak-dela.png     # Footer
+│           └── (+ 6 more for future use)
 ├── BRAINSTORMING.md        # Design decisions and planning
+├── CLAUDE.md               # Claude Code context file
 └── README.md               # This file
 ```
 
@@ -43,12 +45,12 @@ DSMRussianClub/
 ## Features
 
 - [x] Single-page design
-- [ ] Bilingual content (English/Russian toggle)
-- [ ] Light/Dark mode toggle
-- [ ] Google Maps embed (clickable, opens in maps app)
-- [ ] Hedgehog mascot (Duolingo-inspired, user-provided artwork)
-- [ ] Footer with all 15 former Soviet republic flags
-- [ ] Responsive design (mobile-friendly)
+- [x] Bilingual content (English/Russian toggle)
+- [x] Light/Dark mode toggle
+- [x] Google Maps embed (clickable, opens in maps app)
+- [x] Hedgehog mascot "Yozhik" — multiple poses as section companions
+- [x] Footer with all 15 former Soviet republic flags
+- [x] Responsive design (mobile-friendly)
 
 ## Color Palette — Forest Dacha
 
@@ -61,13 +63,11 @@ DSMRussianClub/
 
 *Dark mode inverts background/foreground while keeping accent colors*
 
-## Assets Needed
+## Assets Status
 
-- [ ] **Hedgehog mascot images** — User will provide
-  - Main hero image (larger, for header)
-  - Favicon version (small, square)
-- [ ] **Contact email** — TBD
-- [ ] **WhatsApp group link** — TBD
+- [x] **Hedgehog mascot images** — 12 poses with transparent backgrounds
+- [x] **Contact email** — Connected (dsmrussianconversationclub@gmail.com)
+- [x] **WhatsApp group link** — Connected
 
 ## Development
 

@@ -38,23 +38,23 @@ A simple, static website for a local Russian-speaking club that meets weekly at 
 ## Features
 
 ### Must Have
-- [ ] **Club description** — What we do, who we are, all levels welcome
-- [ ] **Meeting schedule** — Saturdays, 1 PM, Study Room 1
-- [ ] **Location info** — Des Moines Public Library address + embedded Google Map
+- [x] **Club description** — What we do, who we are, all levels welcome
+- [x] **Meeting schedule** — Saturdays, 1 PM, Study Room 1
+- [x] **Location info** — Des Moines Public Library address + embedded Google Map
   - Google Maps iframe embed showing the library location
   - Clickable — opens in user's default maps app
   - Address displayed as text alongside the map
-- [ ] **Contact options** — Email + WhatsApp group join link
-- [ ] **Language toggle** — English ↔ Russian (upper right)
-- [ ] **Dark/Light mode toggle** — (upper right, near language toggle)
+- [x] **Contact options** — Email + WhatsApp group join link (email still placeholder)
+- [x] **Language toggle** — English ↔ Russian (upper right)
+- [x] **Dark/Light mode toggle** — (upper right, near language toggle)
 
 ### Cultural Elements
-- [ ] **Hedgehog mascot** — Inspired by "Ёжик в тумане" (Hedgehog in the Fog)
-  - Could appear in header, as a favicon, maybe with subtle animations
+- [x] **Hedgehog mascot "Yozhik"** — Inspired by "Ёжик в тумане" (Hedgehog in the Fog)
+  - 12 poses created, 5 used as "section companions" throughout the page
   - Friendly, approachable, distinctly "ours"
-- [ ] **Former Soviet republic flags** — Celebrating the diversity of Russian speakers
+- [x] **Former Soviet republic flags** — Celebrating the diversity of Russian speakers
   - All 15: Russia, Ukraine, Belarus, Moldova, Georgia, Armenia, Azerbaijan, Kazakhstan, Uzbekistan, Tajikistan, Kyrgyzstan, Turkmenistan, Estonia, Latvia, Lithuania
-  - **DECIDED**: Subtle footer ribbon ✓
+  - Implemented as subtle footer ribbon with emoji flags
 - [ ] **Russian proverbs/quotes** — Optional, can add later
   - Could be rotating or static, adds cultural flavor
   - Example: "В гостях хорошо, а дома лучше" (It's good to visit, but home is best)
@@ -195,24 +195,27 @@ index.html (single page, sections below)
 
 ---
 
-## Mascot — The Hedgehog (Ёжик) ✓
+## Mascot — Yozhik the Hedgehog (Ёжик) ✓ COMPLETE
 
 The hedgehog is a beloved figure in Russian/Soviet culture, most famously from the 1975 animated film "Hedgehog in the Fog" (Ёжик в тумане) by Yuri Norstein.
 
-### Style — DECIDED: Cute Cartoon (Duolingo-inspired)
+### Style — Cute Cartoon (Duolingo-inspired) ✓
 
 - **Vibe**: Inspired by the Duolingo owl's approachable, slightly sassy cartoon style
-- **Colors**: Hedgehog-y earth tones (browns, tans, cream) — NOT green
-- **Personality**: Friendly but can be a little cheeky/sassy in future iterations
-- **Legal note**: Must be legally distinct from Duo — our own original character
+- **Colors**: Hedgehog-y earth tones (browns, tans, cream)
+- **Personality**: Friendly, welcoming, with speech bubbles in Russian
 
-### Possible uses:
-- Header illustration (hedgehog holding a samovar? carrying a bundle?)
-- Favicon
-- Subtle CSS animation (hedgehog peeks in from corner?)
-- 404 page (hedgehog lost in fog)
-- Loading state (if needed)
-- Future: Could have personality moments like Duo ("You haven't spoken Russian today...")
+### Current Implementation:
+- **Hero section**: `yozhik-hero.png` — Banner with Russian flag and club name
+- **About section**: `yozhik-reading.png` — Reading a book
+- **When & Where**: `yozhik-pointing.png` — Pointing gesture
+- **Join Us**: `yozhik-lets-talk.png` — "Давай поговорим" speech bubble
+- **Footer**: `yozhik-kak-dela.png` — Waving goodbye with "Как дела?"
+
+### Available for future use:
+- `yozhik-coffee.png`, `yozhik-laptop.png`, `yozhik-microphone.png`
+- `yozhik-otlichno.png`, `yozhik-poyekhali.png`, `yozhik-privet-sign.png`
+- `yozhik-sprite-sheet.png` (all poses combined)
 
 ---
 
@@ -222,15 +225,17 @@ The hedgehog is a beloved figure in Russian/Soviet culture, most famously from t
 |----------|----------|
 | Club name | Des Moines Russian Conversation Club |
 | Color palette | Forest Dacha (greens, browns, golden yellow) |
-| Mascot style | Cute cartoon, Duolingo-inspired, hedgehog colors, sassy personality |
-| Flag display | Subtle footer ribbon |
+| Mascot style | Cute cartoon, Duolingo-inspired, hedgehog colors |
+| Mascot usage | "Section companions" — different poses guide visitors through the page |
+| Flag display | Emoji flags in subtle footer ribbon |
+| Contact method | WhatsApp group (connected) + Email (placeholder) |
 
-## Still Needed (Placeholders for Now)
+## Still Needed
 
-- [ ] **Contact email** — TBD (using placeholder)
-- [ ] **WhatsApp group invite link** — TBD (using placeholder)
+- [x] **Contact email** — Connected (dsmrussianconversationclub@gmail.com)
+- [x] **WhatsApp group invite link** — Connected
 - [ ] **Proverbs** — None selected yet, can add later
-- [ ] **Hedgehog artwork** — User will provide images
+- [x] **Hedgehog artwork** — 12 poses with transparent backgrounds
 
 ---
 
@@ -238,10 +243,16 @@ The hedgehog is a beloved figure in Russian/Soviet culture, most famously from t
 
 1. ~~Answer open questions~~ ✓ (major decisions made)
 2. ~~Pick a color palette~~ ✓ (Forest Dacha)
-3. Sketch rough wireframe/layout
-4. Create or source hedgehog mascot artwork
-5. Write content (English first, then Russian)
-6. Build it!
+3. ~~Sketch rough wireframe/layout~~ ✓
+4. ~~Create or source hedgehog mascot artwork~~ ✓ (12 poses created)
+5. ~~Write content (English first, then Russian)~~ ✓
+6. ~~Build it!~~ ✓
+
+### Remaining
+- [x] Replace email placeholder with real contact
+- [ ] Deploy to GitHub Pages
+- [ ] Optional: Add Russian proverbs
+- [ ] Optional: Custom domain
 
 ---
 
