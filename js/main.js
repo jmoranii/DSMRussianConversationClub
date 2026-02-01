@@ -105,9 +105,9 @@
     var month = String(nextSaturday.getMonth() + 1).padStart(2, '0');
     var day = String(nextSaturday.getDate()).padStart(2, '0');
 
-    // 1 PM to 3 PM Central Time (13:00 - 15:00)
+    // 1 PM to 2 PM Central Time (13:00 - 14:00)
     var startTime = year + month + day + 'T130000';
-    var endTime = year + month + day + 'T150000';
+    var endTime = year + month + day + 'T140000';
 
     var params = new URLSearchParams({
       action: 'TEMPLATE',
