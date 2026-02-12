@@ -151,7 +151,6 @@ A hidden feature accessed by clicking the footer Yozhik 3 times:
 ## What's NOT Built Yet
 
 - Photo gallery (aspirational, no photos yet)
-- Custom domain — ~~purchased~~ `dsmrussianconversationclub.com` (Porkbun, DNS configured for GitHub Pages)
 - 404 page
 
 ---
@@ -185,6 +184,8 @@ A hidden feature accessed by clicking the footer Yozhik 3 times:
 | Canonical URL | `https://dsmrussianconversationclub.com/` | `index.html` |
 | JSON-LD structured data | `https://dsmrussianconversationclub.com/` | `index.html` |
 | Sitemap | `https://dsmrussianconversationclub.com/sitemap.xml` | `sitemap.xml`, `robots.txt` |
+| og:image | `https://dsmrussianconversationclub.com/assets/images/hedgehog/yozhik-hero.png` | `index.html` |
+| twitter:image | `https://dsmrussianconversationclub.com/assets/images/hedgehog/yozhik-hero.png` | `index.html` |
 
 **Ask the user periodically**: "Has the website URL changed? If so, I'll update the references in the code."
 
