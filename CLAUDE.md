@@ -6,6 +6,8 @@ A simple, static single-page website for a local Russian-speaking club in Des Mo
 
 **Stack**: Pure HTML, CSS, vanilla JavaScript — no frameworks, no build process. Hosted on GitHub Pages.
 
+**Domain**: `dsmrussianconversationclub.com` — registered on **Porkbun** under username **jmoran** (personal account, personal credit card, main personal email for account recovery). DNS configured to point to GitHub Pages. HTTPS enforced.
+
 ---
 
 ## Key Files
