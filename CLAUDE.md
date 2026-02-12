@@ -158,9 +158,9 @@ A hidden feature accessed by clicking the footer Yozhik 3 times:
 
 ## TODO — Manual Steps Needed (in order)
 
-1. [x] **Get a custom domain** — Purchased `dsmrussianconversationclub.com` on Porkbun. DNS configured for GitHub Pages. HTTPS pending certificate issuance (check GitHub repo Settings → Pages → Enforce HTTPS).
+1. [x] **Get a custom domain** — Purchased `dsmrussianconversationclub.com` on Porkbun. DNS configured for GitHub Pages. HTTPS enforced.
 2. [x] **Update hardcoded URLs** — All references updated from `jmoranii.github.io/DSMRussianConversationClub/` to `dsmrussianconversationclub.com/`.
-3. [ ] **Google Search Console** — Register `dsmrussianconversationclub.com` at https://search.google.com/search-console, verify ownership, submit the sitemap (`https://dsmrussianconversationclub.com/sitemap.xml`), and request indexing.
+3. [x] **Google Search Console** — Registered `dsmrussianconversationclub.com`, ownership verified via DNS TXT record, sitemap submitted. Indexing requested.
 
 ---
 
