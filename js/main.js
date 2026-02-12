@@ -117,7 +117,7 @@
       action: 'TEMPLATE',
       text: 'Des Moines Russian Conversation Club / Русский Разговорный Клуб',
       location: ADDRESS + ', Study Room 1',
-      details: 'Weekly Russian conversation meetup - all levels welcome!\n\nЕженедельная встреча для общения на русском языке — для всех уровней!\n\nMore info / Подробнее: https://jmoranii.github.io/DSMRussianConversationClub/',
+      details: 'Weekly Russian conversation meetup - all levels welcome!\n\nЕженедельная встреча для общения на русском языке — для всех уровней!\n\nMore info / Подробнее: https://dsmrussianconversationclub.com/',
       dates: startTime + '/' + endTime,
       ctz: 'America/Chicago',
       recur: 'RRULE:FREQ=WEEKLY;BYDAY=SA'

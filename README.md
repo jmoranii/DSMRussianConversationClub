@@ -32,6 +32,8 @@ DSMRussianClub/
 │           ├── yozhik-lets-talk.png    # Join Us section
 │           ├── yozhik-kak-dela.png     # Footer (easter egg trigger)
 │           └── (+ 6 more used in easter egg)
+├── robots.txt              # Search engine crawling rules
+├── sitemap.xml             # Sitemap for search engine indexing
 ├── BRAINSTORMING.md        # Design decisions and planning
 ├── CLAUDE.md               # Claude Code context file
 └── README.md               # This file
@@ -61,6 +63,7 @@ DSMRussianClub/
 - [x] Open Graph meta tags for social sharing
 - [x] Custom favicon (hedgehog mascot)
 - [x] **Easter egg** — Hidden secret page with music player + memory game
+- [x] SEO: robots.txt, sitemap.xml, canonical URL, JSON-LD structured data (Organization + Event)
 
 ## Color Palette — Forest Dacha
 
@@ -91,7 +94,7 @@ To deploy:
 
 1. Push to GitHub
 2. Enable GitHub Pages in repo settings
-3. Site will be live at `https://[username].github.io/DSMRussianClub/`
+3. Site will be live at `https://dsmrussianconversationclub.com/`
 
 ## Content
 

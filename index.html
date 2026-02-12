@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Des Moines Russian Conversation Club</title>
-  <meta name="description" content="A friendly weekly meetup for Russian speakers and learners of all levels in Des Moines, Iowa.">
+  <meta name="description" content="Join the Des Moines Russian Conversation Club — a free weekly meetup for Russian speakers and learners of all levels. Every Saturday at 1 PM at the Des Moines Public Library.">
 
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dsmrussianconversationclub.com/">
   <meta property="og:title" content="Des Moines Russian Conversation Club">
   <meta property="og:description" content="A friendly weekly meetup for Russian speakers and learners of all levels in Des Moines, Iowa. Every Saturday at 1 PM.">
   <meta property="og:image" content="assets/images/hedgehog/yozhik-hero.png">
@@ -26,6 +27,69 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" type="image/png" href="assets/images/hedgehog/yozhik-coffee.png">
   <link rel="apple-touch-icon" href="assets/images/hedgehog/yozhik-coffee.png">
+  <link rel="canonical" href="https://dsmrussianconversationclub.com/">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Des Moines Russian Conversation Club",
+        "alternateName": "Русский Разговорный Клуб Де-Мойна",
+        "url": "https://dsmrussianconversationclub.com/",
+        "description": "A free weekly meetup for Russian speakers and learners of all levels in Des Moines, Iowa.",
+        "email": "dsmrussianconversationclub@gmail.com",
+        "location": {
+          "@type": "Place",
+          "name": "Des Moines Public Library",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1000 Grand Avenue",
+            "addressLocality": "Des Moines",
+            "addressRegion": "IA",
+            "postalCode": "50309",
+            "addressCountry": "US"
+          }
+        }
+      },
+      {
+        "@type": "Event",
+        "name": "Des Moines Russian Conversation Club Meetup",
+        "description": "Weekly Russian conversation meetup — all levels welcome. Practice speaking Russian in a casual, friendly setting.",
+        "eventSchedule": {
+          "@type": "Schedule",
+          "byDay": "https://schema.org/Saturday",
+          "startTime": "13:00",
+          "endTime": "14:00",
+          "scheduleTimezone": "America/Chicago",
+          "repeatFrequency": "P1W"
+        },
+        "location": {
+          "@type": "Place",
+          "name": "Des Moines Public Library — Study Room 1",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1000 Grand Avenue",
+            "addressLocality": "Des Moines",
+            "addressRegion": "IA",
+            "postalCode": "50309",
+            "addressCountry": "US"
+          }
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "Des Moines Russian Conversation Club",
+          "url": "https://dsmrussianconversationclub.com/"
+        },
+        "isAccessibleForFree": true,
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "inLanguage": ["en", "ru"]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Header -->

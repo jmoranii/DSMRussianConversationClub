@@ -25,6 +25,8 @@ DSMRussianClub/
 │   │   └── club-song.mp3   # "Yozhik's Welcome" club anthem
 │   └── images/
 │       └── hedgehog/   # Yozhik mascot images (see below)
+├── robots.txt          # Search engine crawling rules
+├── sitemap.xml         # Sitemap for search engine indexing
 ├── BRAINSTORMING.md    # Full design decisions and wireframe
 └── README.md           # Project overview and structure
 ```
@@ -149,8 +151,16 @@ A hidden feature accessed by clicking the footer Yozhik 3 times:
 ## What's NOT Built Yet
 
 - Photo gallery (aspirational, no photos yet)
-- Custom domain (may add later)
+- Custom domain — ~~purchased~~ `dsmrussianconversationclub.com` (Porkbun, DNS configured for GitHub Pages)
 - 404 page
+
+---
+
+## TODO — Manual Steps Needed (in order)
+
+1. [x] **Get a custom domain** — Purchased `dsmrussianconversationclub.com` on Porkbun. DNS configured for GitHub Pages. HTTPS pending certificate issuance (check GitHub repo Settings → Pages → Enforce HTTPS).
+2. [x] **Update hardcoded URLs** — All references updated from `jmoranii.github.io/DSMRussianConversationClub/` to `dsmrussianconversationclub.com/`.
+3. [ ] **Google Search Console** — Register `dsmrussianconversationclub.com` at https://search.google.com/search-console, verify ownership, submit the sitemap (`https://dsmrussianconversationclub.com/sitemap.xml`), and request indexing.
 
 ---
 
@@ -160,6 +170,7 @@ A hidden feature accessed by clicking the footer Yozhik 3 times:
 - All mascot images now have transparent backgrounds
 - "Add to Calendar" button creates a recurring Google Calendar event (Saturdays 1-2 PM Central)
 - "Copy Address" button copies library address to clipboard with bilingual feedback
+- SEO: `robots.txt`, `sitemap.xml`, canonical URL, `og:url`, and JSON-LD structured data (Organization + recurring Event) are in place
 
 ---
 
@@ -169,8 +180,11 @@ A hidden feature accessed by clicking the footer Yozhik 3 times:
 
 | Location | Current URL | File |
 |----------|-------------|------|
-| Website URL | `https://jmoranii.github.io/DSMRussianConversationClub/` | `js/main.js` (in addToCalendar function) |
-| og:url | *(not set yet - add when deploying)* | `index.html` |
+| Website URL | `https://dsmrussianconversationclub.com/` | `js/main.js` (in addToCalendar function) |
+| og:url | `https://dsmrussianconversationclub.com/` | `index.html` |
+| Canonical URL | `https://dsmrussianconversationclub.com/` | `index.html` |
+| JSON-LD structured data | `https://dsmrussianconversationclub.com/` | `index.html` |
+| Sitemap | `https://dsmrussianconversationclub.com/sitemap.xml` | `sitemap.xml`, `robots.txt` |
 
 **Ask the user periodically**: "Has the website URL changed? If so, I'll update the references in the code."
 
