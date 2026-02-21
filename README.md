@@ -7,7 +7,7 @@ A simple, static website for the Des Moines Russian Conversation Club — a frie
 ## About the Club
 
 - **What**: Casual Russian-speaking meetup — conversation, games, community
-- **Where**: Des Moines Public Library, Study Room 1
+- **Where**: Des Moines Public Library, Conference Room 2
 - **When**: Every Saturday at 1:00 PM - 2:00 PM Central
 - **Who**: Anyone interested in speaking Russian, from beginners to native speakers
 
