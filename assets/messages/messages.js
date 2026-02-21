@@ -6,20 +6,12 @@
  */
 var YOZHIK_MESSAGES = {
   en: `
-**Welcome to Yozhik's Secret Room!**
-
-This is where Yozhik posts the latest news, fun facts, and announcements for our club.
-
-Check back each week for something new!
+Test number two, seeing if I can easily update this message.
 
 *— Yozhik, February 21, 2026*
 `,
   ru: `
-**Добро пожаловать в секретную комнату Ёжика!**
-
-Здесь Ёжик публикует последние новости, интересные факты и объявления для нашего клуба.
-
-Заходите каждую неделю — будет что-то новое!
+Тест номер два, проверяю, можно ли легко обновить это сообщение.
 
 *— Ёжик, 21 февраля 2026 г.*
 `
