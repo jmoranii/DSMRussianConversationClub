@@ -277,6 +277,21 @@
     });
   }
 
+  // --- Message Board ---
+  function initMessage() {
+    var enDiv = document.getElementById('message-en');
+    var ruDiv = document.getElementById('message-ru');
+    if (!enDiv || !ruDiv) return;
+    if (typeof YOZHIK_MESSAGES === 'undefined') return;
+
+    var parse = (typeof marked !== 'undefined')
+      ? function(md) { return marked.parse(md); }
+      : function(md) { return '<p>' + md + '</p>'; };
+
+    enDiv.innerHTML = parse(YOZHIK_MESSAGES.en);
+    ruDiv.innerHTML = parse(YOZHIK_MESSAGES.ru);
+  }
+
   // --- Initialize ---
   function init() {
     // Only run on easter egg page
@@ -285,6 +300,7 @@
     renderBoard();
     initAudioPlayer();
     initLyricsToggle();
+    initMessage();
 
     var resetBtn = document.getElementById('reset-game');
     if (resetBtn) {
