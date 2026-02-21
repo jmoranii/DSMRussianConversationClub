@@ -36,7 +36,7 @@
   <main class="kz-main">
 
     <!-- Hero -->
-    <section class="kz-hero">
+    <section class="kz-hero kz-animate">
       <div class="kz-hero-flag">🇰🇿</div>
       <h2>
         <span lang="en">Why Kazakhstan is Amazing</span>
@@ -49,7 +49,7 @@
     </section>
 
     <!-- Horses Section -->
-    <section class="kz-section">
+    <section class="kz-section kz-animate">
       <div class="kz-section-emoji">🐴</div>
       <h3>
         <span lang="en">Where Humans First Rode Horses</span>
@@ -68,7 +68,7 @@
     </section>
 
     <!-- Apples Section -->
-    <section class="kz-section">
+    <section class="kz-section kz-animate">
       <div class="kz-section-emoji">🍎</div>
       <h3>
         <span lang="en">The Birthplace of the Apple</span>
@@ -87,7 +87,7 @@
     </section>
 
     <!-- 2026 Winter Olympics Section -->
-    <section class="kz-section kz-olympics">
+    <section class="kz-section kz-olympics kz-animate">
       <div class="kz-section-emoji">🏅</div>
       <h3>
         <span lang="en">Olympic Glory: Milano Cortina 2026</span>
@@ -136,7 +136,7 @@
     </section>
 
     <!-- More Cool Facts Section -->
-    <section class="kz-section">
+    <section class="kz-section kz-animate">
       <div class="kz-section-emoji">🌟</div>
       <h3>
         <span lang="en">More Reasons Kazakhstan is Cool</span>
@@ -193,14 +193,14 @@
         </div>
 
         <div class="kz-fact-card">
-          <div class="kz-fact-emoji">🏠</div>
+          <div class="kz-fact-emoji">🍖</div>
           <h4>
-            <span lang="en">Yurt Culture</span>
-            <span lang="ru">Культура юрты</span>
+            <span lang="en">Legendary Hospitality</span>
+            <span lang="ru">Легендарное гостеприимство</span>
           </h4>
           <p>
-            <span lang="en">The <strong>yurt</strong> (kiiz üy) is a portable round tent that has been the traditional dwelling of Kazakh nomads for thousands of years. It can be assembled or taken down in under an hour. The yurt remains a powerful symbol of Kazakh hospitality and is featured on the national flag.</span>
-            <span lang="ru"><strong>Юрта</strong> (киіз үй) — переносное круглое жилище, которое было традиционным домом казахских кочевников на протяжении тысячелетий. Её можно собрать или разобрать менее чем за час. Юрта остаётся символом казахского гостеприимства и изображена на государственном флаге.</span>
+            <span lang="en">Kazakh hospitality (<strong>qonaqasy</strong>) is sacred — turning away a guest is considered deeply shameful. A traditional <strong>dastarkhan</strong> (feast table) overflows with dishes like <strong>beshbarmak</strong> (hand-pulled noodles with meat), <strong>baursak</strong> (fried dough), and <strong>kumys</strong> (fermented mare's milk). If you visit a Kazakh home, expect to leave very, very full.</span>
+            <span lang="ru">Казахское гостеприимство (<strong>қонақасы</strong>) — это святое: отказать гостю считается большим позором. Традиционный <strong>дастархан</strong> (праздничный стол) ломится от блюд: <strong>бешбармак</strong> (лапша с мясом), <strong>баурсаки</strong> (жареное тесто) и <strong>кумыс</strong> (кисломолочный напиток из кобыльего молока). Если вы окажетесь в казахском доме — готовьтесь уйти очень, очень сытыми.</span>
           </p>
         </div>
 
@@ -236,5 +236,22 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    // Scroll-triggered reveal animations
+    (function() {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.kz-animate').forEach(function(el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
 </body>
 </html>
