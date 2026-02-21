@@ -2,6 +2,8 @@
 
 A simple, static website for the Des Moines Russian Conversation Club — a friendly weekly meetup for Russian speakers and learners of all levels.
 
+**Live site**: [dsmrussianconversationclub.com](https://dsmrussianconversationclub.com/)
+
 ## About the Club
 
 - **What**: Casual Russian-speaking meetup — conversation, games, community
@@ -12,58 +14,63 @@ A simple, static website for the Des Moines Russian Conversation Club — a frie
 ## Project Structure
 
 ```
-DSMRussianClub/
-├── index.html              # Main single-page site
-├── easter-egg.html         # Secret page with music player + memory game
+DSMRussianConversationClub/
+├── index.html                      # Main single-page site
+├── yozhiks-secret-room.html        # Hidden page (music player, message board, memory game)
 ├── css/
-│   ├── styles.css          # All styles, including light/dark themes
-│   └── easter-egg.css      # Easter egg page styles
+│   ├── styles.css                  # All styles, including light/dark themes
+│   └── yozhiks-secret-room.css     # Secret room page styles
 ├── js/
-│   ├── main.js             # Language toggle, theme toggle, easter egg trigger
-│   └── easter-egg.js       # Memory game + audio player logic
+│   ├── main.js                     # Language toggle, theme toggle, secret room trigger
+│   └── yozhiks-secret-room.js      # Memory game, audio player, lyrics toggle, message board
 ├── assets/
 │   ├── audio/
-│   │   └── club-song.mp3   # "Yozhik's Welcome" club anthem
-│   └── images/
-│       └── hedgehog/       # Yozhik mascot images (transparent PNGs)
-│           ├── yozhik-hero.png         # Hero banner image
-│           ├── yozhik-reading.png      # About section
-│           ├── yozhik-pointing.png     # When & Where section
-│           ├── yozhik-lets-talk.png    # Join Us section
-│           ├── yozhik-kak-dela.png     # Footer (easter egg trigger)
-│           └── (+ 6 more used in easter egg)
-├── robots.txt              # Search engine crawling rules
-├── sitemap.xml             # Sitemap for search engine indexing
-├── BRAINSTORMING.md        # Design decisions and planning
-├── CLAUDE.md               # Claude Code context file
-└── README.md               # This file
+│   │   └── club-song.mp3           # "Yozhik's Welcome" club anthem
+│   ├── images/
+│   │   └── hedgehog/               # Yozhik mascot images (12 transparent PNGs)
+│   └── messages/
+│       └── messages.js             # Yozhik's Latest Message content (EN + RU)
+├── .claude/
+│   └── skills/                     # Claude Code skills for this project
+│       ├── update-message/         # /update-message — post a new message to the secret room
+│       └── skill-creator/          # Reference guide for creating new skills
+├── robots.txt                      # Search engine crawling rules
+├── sitemap.xml                     # Sitemap for search engine indexing
+├── CNAME                           # Custom domain config for GitHub Pages
+├── CLAUDE.md                       # Claude Code context file
+└── README.md                       # This file
 ```
 
 ## Tech Stack
 
 - **HTML5** — Semantic, accessible markup
 - **CSS3** — Custom properties for theming, no frameworks
-- **Vanilla JavaScript** — Minimal JS for:
-  - Language toggle (English ↔ Russian)
-  - Theme toggle (Light ↔ Dark mode)
-  - Any subtle animations
-- **Hosting** — GitHub Pages
+- **Vanilla JavaScript** — No build process, no dependencies
+- **Hosting** — GitHub Pages with custom domain
 
 ## Features
 
-- [x] Single-page design
-- [x] Bilingual content (English/Russian toggle)
-- [x] Light/Dark mode toggle
-- [x] Google Maps embed (clickable, opens in maps app)
-- [x] Hedgehog mascot "Yozhik" — multiple poses as section companions
-- [x] Footer with all 15 former Soviet republic flags
-- [x] Responsive design (mobile-friendly)
-- [x] "Add to Calendar" button (Google Calendar, recurring event)
-- [x] Copy address button with feedback
-- [x] Open Graph meta tags for social sharing
-- [x] Custom favicon (hedgehog mascot)
-- [x] **Easter egg** — Hidden secret page with music player + memory game
-- [x] SEO: robots.txt, sitemap.xml, canonical URL, JSON-LD structured data (Organization + Event)
+### Main Site (`index.html`)
+- Bilingual content (English/Russian toggle)
+- Light/Dark mode toggle (respects system preference)
+- Google Maps embed (clickable, opens in maps app)
+- "Add to Calendar" button (Google Calendar, recurring Saturday event)
+- Copy address button with bilingual feedback
+- Hedgehog mascot "Yozhik" as section companions
+- Footer with all 15 former Soviet republic flags
+- Responsive design (mobile-friendly)
+- SEO: robots.txt, sitemap.xml, canonical URL, Open Graph, JSON-LD structured data
+
+### Yozhik's Secret Room (`yozhiks-secret-room.html`)
+Hidden page accessed by clicking the footer Yozhik 3 times.
+
+- **Music player** — "Yozhik's Welcome" club anthem with collapsible lyrics
+- **Yozhik's Latest Message** — Updatable message board (edit `assets/messages/messages.js`)
+- **Memory game** — Match Yozhik poses in English and Russian (3 random pairs per game)
+
+## Updating Yozhik's Message
+
+The message board on the secret room page is designed for easy updates. Edit `assets/messages/messages.js` — it contains both English and Russian versions with a date sign-off. Use the `/update-message` Claude Code skill for a guided workflow that includes translation and auto-commit.
 
 ## Color Palette — Forest Dacha
 
@@ -76,42 +83,20 @@ DSMRussianClub/
 
 *Dark mode inverts background/foreground while keeping accent colors*
 
-## Assets Status
+## Mascot — Yozhik (Ёжик)
 
-- [x] **Hedgehog mascot images** — 12 poses with transparent backgrounds
-- [x] **Contact email** — Connected (dsmrussianconversationclub@gmail.com)
-- [x] **WhatsApp group link** — Connected
+The hedgehog mascot references "Ёжик в тумане" (Hedgehog in the Fog), a beloved 1975 Soviet animated film. 12 poses are used throughout the site as section companions and in the memory game.
 
 ## Development
 
-This is a static site with no build process. To develop locally:
+This is a static site with no build process:
 
 1. Clone the repo
 2. Open `index.html` in a browser
 3. Edit and refresh
 
-To deploy:
-
-1. Push to GitHub
-2. Enable GitHub Pages in repo settings
-3. Site will be live at `https://dsmrussianconversationclub.com/`
-
-## Content
-
-### English
-- Welcome text
-- About section
-- Location & schedule
-- Join us CTA
-
-### Russian (Русский)
-- All content translated naturally (not machine-translated)
-- Toggle switches all visible text
+To deploy: push to `main` — GitHub Pages deploys automatically.
 
 ## License
 
 This project is for the Des Moines Russian Conversation Club. Feel free to use as inspiration for your own community club website.
-
----
-
-*See [BRAINSTORMING.md](BRAINSTORMING.md) for detailed design decisions and wireframes.*
