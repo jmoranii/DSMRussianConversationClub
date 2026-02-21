@@ -725,7 +725,7 @@ section h2 .section-icon {
   }
 }
 
-/* --- Easter Egg Hints --- */
+/* --- Secret Room Hints --- */
 #footer-yozhik {
   cursor: pointer;
   transition: transform var(--transition-fast), filter var(--transition-fast);
@@ -736,16 +736,16 @@ section h2 .section-icon {
   -webkit-user-select: none;
 }
 
-#footer-yozhik.easter-hint-1 {
+#footer-yozhik.secret-hint-1 {
   animation: wiggle 0.3s ease;
 }
 
-#footer-yozhik.easter-hint-2 {
+#footer-yozhik.secret-hint-2 {
   animation: wiggle 0.3s ease;
   filter: drop-shadow(0 0 10px var(--color-accent));
 }
 
-#footer-yozhik.easter-activated {
+#footer-yozhik.secret-activated {
   animation: spin-away 0.5s ease forwards;
 }
 

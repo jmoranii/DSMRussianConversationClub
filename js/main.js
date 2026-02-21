@@ -27,9 +27,9 @@
   // --- Constants ---
   const ADDRESS = 'Des Moines Public Library, 1000 Grand Avenue, Des Moines, IA 50309';
 
-  // --- Easter Egg State ---
-  var easterEggClicks = 0;
-  var easterEggTimeout = null;
+  // --- Secret Room State ---
+  var secretRoomClicks = 0;
+  var secretRoomTimeout = null;
 
   // --- Utilities ---
   function getStoredValue(key, defaultValue) {
@@ -156,32 +156,32 @@
     });
   }
 
-  // --- Easter Egg Trigger ---
-  function handleEasterEggClick() {
+  // --- Secret Room Trigger ---
+  function handleSecretRoomClick() {
     var footerYozhik = document.getElementById('footer-yozhik');
-    easterEggClicks++;
+    secretRoomClicks++;
 
     // Visual feedback
-    if (easterEggClicks === 1) {
-      footerYozhik.classList.add('easter-hint-1');
-    } else if (easterEggClicks === 2) {
-      footerYozhik.classList.remove('easter-hint-1');
-      footerYozhik.classList.add('easter-hint-2');
-    } else if (easterEggClicks >= 3) {
-      // Trigger easter egg!
-      footerYozhik.classList.remove('easter-hint-2');
-      footerYozhik.classList.add('easter-activated');
+    if (secretRoomClicks === 1) {
+      footerYozhik.classList.add('secret-hint-1');
+    } else if (secretRoomClicks === 2) {
+      footerYozhik.classList.remove('secret-hint-1');
+      footerYozhik.classList.add('secret-hint-2');
+    } else if (secretRoomClicks >= 3) {
+      // Trigger secret room!
+      footerYozhik.classList.remove('secret-hint-2');
+      footerYozhik.classList.add('secret-activated');
       setTimeout(function() {
-        window.location.href = 'easter-egg.html';
+        window.location.href = 'yozhiks-secret-room.html';
       }, 500);
       return;
     }
 
     // Reset after 2 seconds of inactivity
-    clearTimeout(easterEggTimeout);
-    easterEggTimeout = setTimeout(function() {
-      easterEggClicks = 0;
-      footerYozhik.classList.remove('easter-hint-1', 'easter-hint-2');
+    clearTimeout(secretRoomTimeout);
+    secretRoomTimeout = setTimeout(function() {
+      secretRoomClicks = 0;
+      footerYozhik.classList.remove('secret-hint-1', 'secret-hint-2');
     }, 2000);
   }
 
@@ -203,18 +203,18 @@
       copyAddressBtn.addEventListener('click', copyAddress);
     }
 
-    // Easter egg trigger
+    // Secret room trigger
     var footerYozhik = document.getElementById('footer-yozhik');
     if (footerYozhik) {
       // Use both click and touchend for cross-platform support
       // touchend is more reliable on Android
-      footerYozhik.addEventListener('click', handleEasterEggClick);
+      footerYozhik.addEventListener('click', handleSecretRoomClick);
       footerYozhik.addEventListener('touchend', function(e) {
         e.preventDefault(); // Prevent ghost click
-        handleEasterEggClick();
+        handleSecretRoomClick();
       }, { passive: false });
       footerYozhik.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') handleEasterEggClick();
+        if (e.key === 'Enter') handleSecretRoomClick();
       });
     }
 

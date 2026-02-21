@@ -1,6 +1,6 @@
 /**
  * Des Moines Russian Conversation Club
- * Easter Egg - Memory Game & Audio Player
+ * Yozhik's Secret Room - Memory Game & Audio Player
  */
 
 (function() {
@@ -294,8 +294,8 @@
 
   // --- Initialize ---
   function init() {
-    // Only run on easter egg page
-    if (!document.querySelector('.easter-egg-page')) return;
+    // Only run on secret room page
+    if (!document.querySelector('.yozhiks-secret-room-page')) return;
 
     renderBoard();
     initAudioPlayer();
