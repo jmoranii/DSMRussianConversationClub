@@ -78,6 +78,7 @@
 
 .music-player {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: var(--spacing-lg);
   padding: var(--spacing-lg);
@@ -152,25 +153,56 @@
   text-align: right;
 }
 
-/* --- Lyrics --- */
-.lyrics-container {
-  background: var(--color-background-alt);
-  border-radius: var(--border-radius);
-  padding: var(--spacing-lg);
-  border: 2px solid var(--color-primary-soft);
+/* --- Player Buttons Row --- */
+.player-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
 }
 
-.lyrics-container h3 {
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-sm);
-  text-align: center;
+/* --- Lyrics Toggle Button --- */
+.btn-lyrics {
+  background: var(--color-secondary);
+  color: white;
+  border: 2px solid var(--color-secondary);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-base);
+  transition: background var(--transition-fast), transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.btn-lyrics:hover {
+  background: #6d5a45;
+  transform: scale(1.02);
+}
+
+.btn-lyrics.active {
+  background: var(--color-primary);
+  border-color: var(--color-accent);
+}
+
+.lyrics-icon {
+  font-size: 1.2em;
+}
+
+/* --- Collapsible Lyrics Panel --- */
+.lyrics-panel {
+  width: 100%;
+  margin-top: var(--spacing-md);
+  border-top: 2px solid var(--color-primary-soft);
+  padding-top: var(--spacing-md);
 }
 
 .lyrics-scroll {
   font-family: Georgia, 'Times New Roman', serif;
   line-height: 1.8;
   white-space: pre-wrap;
-  max-height: 300px;
+  max-height: 350px;
   overflow-y: auto;
   padding: var(--spacing-sm);
   color: var(--color-text);
@@ -405,6 +437,16 @@
 
   .player-controls {
     width: 100%;
+  }
+
+  .player-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-play,
+  .btn-lyrics {
+    justify-content: center;
   }
 
   .progress-container {

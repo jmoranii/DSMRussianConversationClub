@@ -264,6 +264,19 @@
     });
   }
 
+  // --- Lyrics Toggle ---
+  function initLyricsToggle() {
+    var toggleBtn = document.getElementById('lyrics-toggle');
+    var lyricsPanel = document.getElementById('lyrics-panel');
+    if (!toggleBtn || !lyricsPanel) return;
+
+    toggleBtn.addEventListener('click', function() {
+      var isHidden = lyricsPanel.hidden;
+      lyricsPanel.hidden = !isHidden;
+      toggleBtn.classList.toggle('active', isHidden);
+    });
+  }
+
   // --- Initialize ---
   function init() {
     // Only run on easter egg page
@@ -271,6 +284,7 @@
 
     renderBoard();
     initAudioPlayer();
+    initLyricsToggle();
 
     var resetBtn = document.getElementById('reset-game');
     if (resetBtn) {
