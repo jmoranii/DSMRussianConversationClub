@@ -8,19 +8,19 @@ var YOZHIK_MESSAGES = {
   en: `
 **Russian Proverb of the Day:**
 
-*"Without effort, you won't pull a fish from the pond."*
+*"Live a century — learn a century."*
 
-🎣 This classic saying — **Без труда не вытащишь и рыбку из пруда** — reminds us that nothing worthwhile comes without work. Whether you're learning Russian, mastering a new recipe, or just trying to get through a Monday — keep going! The fish is worth it. 🐟
+📚 **Век живи — век учись.** This beloved proverb reminds us that learning never stops — no matter how old or experienced you are, there's always something new to discover. Whether it's a tricky Russian verb conjugation or a fun new word, every Saturday at the club is a chance to keep learning together! 🦔
 
-*— Yozhik, February 21, 2026*
+*— Yozhik, February 28, 2026*
 `,
   ru: `
 **Русская пословица дня:**
 
-*«Без труда не вытащишь и рыбку из пруда.»*
+*«Век живи — век учись.»*
 
-🎣 Эта всем известная пословица напоминает нам, что ничего стоящего не даётся без усилий. Учите русский язык, осваиваете новый рецепт или просто пытаетесь пережить понедельник — не сдавайтесь! Рыбка того стоит. 🐟
+📚 Эта любимая пословица напоминает нам, что учиться никогда не поздно и никогда не рано закончить. Сколько бы тебе ни было лет, всегда найдётся что-то новое. Будь то хитрое спряжение русского глагола или забавное новое слово — каждая суббота в клубе — это шанс учиться вместе! 🦔
 
-*— Ёжик, 21 февраля 2026 г.*
+*— Ёжик, 28 февраля 2026 г.*
 `
 };
