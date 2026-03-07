@@ -2,7 +2,7 @@
 
 ## Project Summary
 
-A simple, static single-page website for a local Russian-speaking club in Des Moines, Iowa. The club meets every Saturday at 1 PM at the Des Moines Public Library (Conference Room 2). The site welcomes Russian speakers and learners of all levels.
+A simple, static single-page website for a local Russian-speaking club in Des Moines, Iowa. The club meets every Saturday at 1 PM at the Des Moines Public Library (Study Room 1). The site welcomes Russian speakers and learners of all levels.
 
 **Stack**: Pure HTML, CSS, vanilla JavaScript — no frameworks, no build process. Hosted on GitHub Pages.
 
@@ -108,7 +108,7 @@ JavaScript toggles `data-theme` attribute and respects `prefers-color-scheme` fo
 
 - **Name**: Des Moines Russian Conversation Club
 - **Location**: Des Moines Public Library, 1000 Grand Avenue, Des Moines, IA 50309
-- **Room**: Conference Room 2
+- **Room**: Study Room 1
 - **Schedule**: Every Saturday at 1:00 PM - 2:00 PM Central
 - **Vibe**: Casual, welcoming, all levels, games and conversation
 
