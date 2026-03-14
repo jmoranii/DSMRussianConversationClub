@@ -20,7 +20,8 @@ DSMRussianClub/
 │   ├── styles.css      # All styling, includes light/dark themes
 │   └── easter-egg.css  # Easter egg page styles
 ├── js/
-│   ├── main.js         # Language toggle, theme toggle, easter egg trigger
+│   ├── main.js         # Language toggle, theme toggle, meeting status, easter egg trigger
+│   ├── schedule-data.js # Weekly meeting exceptions (cancellations, special messages)
 │   └── easter-egg.js   # Memory game + audio player logic
 ├── assets/
 │   ├── audio/
@@ -84,6 +85,33 @@ Uses CSS custom properties defined in `:root` and `[data-theme="dark"]`:
 - Dark mode: dark background (#1a1a1a), lighter green (#4A7C23)
 
 JavaScript toggles `data-theme` attribute and respects `prefers-color-scheme` for initial load.
+
+### Weekly Meeting Status Banner
+
+A dynamic banner at the top of the "When & Where" section that shows whether the club is meeting this coming Saturday.
+
+**How it works**:
+- `main.js` calculates the upcoming Saturday (or today if it's Saturday before 2 PM)
+- Looks up that date (`YYYY-MM-DD`) in `SCHEDULE_EXCEPTIONS` from `js/schedule-data.js`
+- If no exception found: shows green "We're meeting this Saturday, [date]!" banner
+- If exception found: shows the custom message with appropriate styling (amber for cancelled, blue for special)
+- Uses the standard `<span lang="en/ru">` pattern — toggles automatically with language switch
+
+**Three visual states**:
+- **Confirmed** (green): Default — meeting is on as usual
+- **Cancelled** (amber): No meeting this week (holidays, etc.)
+- **Special** (blue): Meeting with changes (different time, room, etc.)
+
+**To cancel or modify a week**: Edit `js/schedule-data.js` and add an entry:
+```js
+'2026-12-26': {
+  type: 'cancelled',  // or 'special'
+  en: 'No meeting — Merry Christmas!',
+  ru: 'Встречи не будет — С Рождеством!'
+}
+```
+
+**Rollover**: On Saturday after 2 PM, the banner automatically shows the next Saturday.
 
 ### localStorage Keys
 

@@ -375,6 +375,68 @@ section h2 .section-icon {
   border-radius: 2px;
 }
 
+/* --- Meeting Status Banner --- */
+.meeting-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.meeting-status:empty {
+  display: none;
+}
+
+.meeting-status-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Confirmed — green */
+.meeting-status--confirmed {
+  background: rgba(45, 80, 22, 0.1);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Cancelled — amber */
+.meeting-status--cancelled {
+  background: rgba(230, 160, 30, 0.12);
+  border: 2px solid #c8940a;
+  color: #8a6508;
+}
+
+/* Special — blue */
+.meeting-status--special {
+  background: rgba(41, 98, 163, 0.1);
+  border: 2px solid #2962a3;
+  color: #2962a3;
+}
+
+/* Dark mode variants */
+[data-theme="dark"] .meeting-status--confirmed {
+  background: rgba(74, 124, 35, 0.15);
+}
+
+[data-theme="dark"] .meeting-status--cancelled {
+  background: rgba(230, 160, 30, 0.15);
+  border-color: #e6a41e;
+  color: #f0c040;
+}
+
+[data-theme="dark"] .meeting-status--special {
+  background: rgba(65, 135, 210, 0.15);
+  border-color: #4187d2;
+  color: #6ab0f0;
+}
+
 .schedule-info {
   display: flex;
   flex-wrap: wrap;
@@ -670,6 +732,11 @@ section h2 .section-icon {
 
   .tagline {
     font-size: var(--font-size-base);
+  }
+
+  .meeting-status {
+    font-size: var(--font-size-base);
+    padding: var(--spacing-sm);
   }
 
   .schedule-info {

@@ -92,6 +92,83 @@
     setStoredValue(STORAGE_KEYS.THEME, newTheme);
   }
 
+  // --- Meeting Status Banner ---
+  var MONTHS_EN = ['January','February','March','April','May','June',
+                   'July','August','September','October','November','December'];
+  var MONTHS_RU = ['января','февраля','марта','апреля','мая','июня',
+                   'июля','августа','сентября','октября','ноября','декабря'];
+
+  function getRelevantSaturday() {
+    var now = new Date();
+    var dayOfWeek = now.getDay(); // 0=Sun, 6=Sat
+
+    if (dayOfWeek === 6) {
+      // It's Saturday — show today if before 2 PM, otherwise next week
+      var meetingEnd = new Date(now);
+      meetingEnd.setHours(14, 0, 0, 0);
+      if (now < meetingEnd) {
+        return now;
+      }
+      var next = new Date(now);
+      next.setDate(now.getDate() + 7);
+      return next;
+    }
+
+    // Sun–Fri: show the upcoming Saturday
+    var daysUntil = (6 - dayOfWeek + 7) % 7;
+    var nextSat = new Date(now);
+    nextSat.setDate(now.getDate() + daysUntil);
+    return nextSat;
+  }
+
+  function formatDateKey(date) {
+    var y = date.getFullYear();
+    var m = String(date.getMonth() + 1).padStart(2, '0');
+    var d = String(date.getDate()).padStart(2, '0');
+    return y + '-' + m + '-' + d;
+  }
+
+  function formatDateEN(date) {
+    return MONTHS_EN[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear();
+  }
+
+  function formatDateRU(date) {
+    return date.getDate() + ' ' + MONTHS_RU[date.getMonth()] + ' ' + date.getFullYear() + ' г.';
+  }
+
+  function renderMeetingStatus() {
+    var container = document.getElementById('meeting-status');
+    if (!container) return;
+
+    var saturday = getRelevantSaturday();
+    var dateKey = formatDateKey(saturday);
+    var exception = (typeof SCHEDULE_EXCEPTIONS !== 'undefined')
+                    ? SCHEDULE_EXCEPTIONS[dateKey]
+                    : undefined;
+
+    var dateEN = formatDateEN(saturday);
+    var dateRU = formatDateRU(saturday);
+
+    if (exception) {
+      var icon = exception.type === 'cancelled' ? '⚠️' : 'ℹ️';
+      container.className = 'meeting-status meeting-status--' + exception.type;
+      container.innerHTML =
+        '<span class="meeting-status-icon">' + icon + '</span>' +
+        '<span class="meeting-status-text">' +
+          '<span lang="en">' + exception.en + '</span>' +
+          '<span lang="ru">' + exception.ru + '</span>' +
+        '</span>';
+    } else {
+      container.className = 'meeting-status meeting-status--confirmed';
+      container.innerHTML =
+        '<span class="meeting-status-icon">✅</span>' +
+        '<span class="meeting-status-text">' +
+          '<span lang="en">We\'re meeting this Saturday, ' + dateEN + '!</span>' +
+          '<span lang="ru">Встречаемся в эту субботу, ' + dateRU + '!</span>' +
+        '</span>';
+    }
+  }
+
   // --- Add to Calendar ---
   function addToCalendar() {
     // Google Calendar URL with recurring Saturday event at 1 PM Central
@@ -233,6 +310,7 @@
   function init() {
     initLanguage();
     initTheme();
+    renderMeetingStatus();
     bindEvents();
   }
 
