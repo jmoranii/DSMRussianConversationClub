@@ -6,21 +6,21 @@
  */
 var YOZHIK_MESSAGES = {
   en: `
-**We're back on the schedule!** 🎉
+**Spring is here — time to get outside!** ☀️
 
-Great news — our club is officially on the Des Moines Public Library's program schedule again! That means new faces may find their way to Study Room 1 on Saturdays. If you see someone new, give them a warm **Добро пожаловать!**
+The weather is finally warming up, and you know what that means — picnic season! As the Russian proverb says: *"Spring is beautiful with flowers, and autumn with pies."* — **Весна красна цветами, а осень — пирогами.**
 
-As the Russian proverb says: *"The more of us, the merrier."* — **Чем больше нас, тем веселее.** The best conversations happen when new voices join the circle. So spread the word, bring a friend, and let's grow our little community together! 🦔
+Who knows, maybe one of these Saturdays we'll take our conversation outside for a picnic in the park. Until then, we'll keep the good vibes going in Study Room 1. Bring your favorite spring stories — and maybe a recipe for шашлык! 🦔
 
-*— Yozhik, March 14, 2026*
+*— Yozhik, March 21, 2026*
 `,
   ru: `
-**Мы снова в расписании!** 🎉
+**Весна пришла — пора на улицу!** ☀️
 
-Отличная новость — наш клуб снова в официальном расписании Публичной библиотеки Де-Мойна! Это значит, что новые люди смогут найти нас в Учебной комнате 1 по субботам. Если увидите кого-то нового — встречайте с теплом и словами **Welcome!**
+Погода наконец-то теплеет, а это значит — сезон пикников! Как говорится: *«Весна красна цветами, а осень — пирогами.»*
 
-Как говорится: *«Чем больше нас, тем веселее.»* Лучшие разговоры получаются, когда к нам присоединяются новые голоса. Расскажите друзьям, приводите знакомых — давайте расти вместе! 🦔
+Кто знает, может быть, в одну из суббот мы вынесем наши разговоры на природу и устроим пикник в парке. А пока — ждём вас в Учебной комнате 1 с хорошим настроением. Приносите свои весенние истории — и, может быть, рецепт шашлыка! 🦔
 
-*— Ёжик, 14 марта 2026 г.*
+*— Ёжик, 21 марта 2026 г.*
 `
 };
