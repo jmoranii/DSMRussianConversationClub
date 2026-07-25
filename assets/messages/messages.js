@@ -6,21 +6,25 @@
  */
 var YOZHIK_MESSAGES = {
   en: `
-**Spring is here — time to get outside!** ☀️
+**Strike while the iron is hot!** 🔥
 
-The weather is finally warming up, and you know what that means — picnic season! As the Russian proverb says: *"Spring is beautiful with flowers, and autumn with pies."* — **Весна красна цветами, а осень — пирогами.**
+July in Iowa is doing exactly what July in Iowa does. But so is the club — new faces keep turning up, we're back on the library's official schedule, and the conversations just keep getting better.
 
-Who knows, maybe one of these Saturdays we'll take our conversation outside for a picnic in the park. Until then, we'll keep the good vibes going in Study Room 1. Bring your favorite spring stories — and maybe a recipe for шашлык! 🦔
+As the proverb goes: *"Strike while the iron is hot."* — **Куй железо, пока горячо.** The moment is now. Been meaning to stop by? Been meaning to bring a friend? Don't wait for the weather to cool off — by then we'll be talking about snow.
 
-*— Yozhik, March 21, 2026*
+Study Room 1, Saturdays at 1 PM. Air conditioning included at no extra charge. ❄️🦔
+
+*— Yozhik, July 25, 2026*
 `,
   ru: `
-**Весна пришла — пора на улицу!** ☀️
+**Куй железо, пока горячо!** 🔥
 
-Погода наконец-то теплеет, а это значит — сезон пикников! Как говорится: *«Весна красна цветами, а осень — пирогами.»*
+Июль в Айове делает своё дело — жара стоит нешуточная. Но и клуб не отстаёт: каждую субботу приходят новые люди, библиотека снова включила нас в официальное расписание, а разговоры становятся только интереснее.
 
-Кто знает, может быть, в одну из суббот мы вынесем наши разговоры на природу и устроим пикник в парке. А пока — ждём вас в Учебной комнате 1 с хорошим настроением. Приносите свои весенние истории — и, может быть, рецепт шашлыка! 🦔
+Как говорится: *«Куй железо, пока горячо.»* Момент — сейчас. Давно собирались зайти? Давно хотели привести друга? Не ждите, пока спадёт жара — а то оглянуться не успеем, как будем обсуждать снег.
 
-*— Ёжик, 21 марта 2026 г.*
+Учебная комната 1, по субботам в 13:00. Кондиционер прилагается бесплатно. ❄️🦔
+
+*— Ёжик, 25 июля 2026 г.*
 `
 };
